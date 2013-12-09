@@ -1,0 +1,53 @@
+.footer {
+  padding: em(30) 0;
+  @include clearfix;
+
+  > .inner {
+    > .social-badges {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      float: right;
+
+      li {
+        margin-left: em(8);
+        float: left;
+
+        .badge {
+          width: 25px;
+          height: 25px;
+          display: block;
+          @include hide-text;
+        }
+      }
+    }
+
+    > .links {
+      .column {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-right: em(50);
+
+        @include media($tablet) {
+          float: left;
+        }
+
+        li {
+          font-size: em(12);
+          line-height: 1.5;
+
+          a {
+            color: #66666d;
+            font-weight: 300;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

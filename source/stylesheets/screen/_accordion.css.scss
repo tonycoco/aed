@@ -1,0 +1,89 @@
+.accordion {
+  background-color: #fff;
+  box-shadow: 0 4px 5px rgba(67,56,13,.25);
+  display: block !important;
+
+  @include media($desktop) {
+    display: none !important;
+  }
+
+  h3 {
+    background-color: #128d30;
+    padding: 0;
+    margin: 0;
+
+    &.ui-accordion-header-active {
+      background-color: #fff;
+      outline: none;
+
+      a {
+        color: #575761;
+        box-shadow: none;
+        padding: em(15) em(12);
+
+        i:before {
+          color: #b0b0b6;
+        }
+      }
+    }
+
+    a {
+      padding: em(12);
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: em(14);
+      line-height: 1.25;
+      box-shadow: inset 0 -4px 6px rgba(67,56,13,.25);
+      outline: none;
+
+      &:hover {
+        background-color: rgba(255,255,255,.1);
+      }
+
+      i:before {
+        color: #7bbf7f;
+        margin-right: .15em;
+      }
+    }
+  }
+
+  > div {
+    padding: 0 em(20) em(15) em(20);
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: em(15);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    h4 {
+      margin: 0 0 em(5);
+      font-size: em(14);
+
+      a {
+        color: #393946;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      color: #979798;
+      font-size: em(13);
+    }
+  }
+}

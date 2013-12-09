@@ -1,0 +1,16 @@
+@import "compass/utilities/sprites/base";
+@import "compass/css3/background-size";
+@import "sass-hidpi";
+
+@import "icons/*.png";
+@import "icons_2x/*.png";
+
+.icons-sprite {
+  @include hidpi {
+    $icons-sprites-width: image-width(sprite-path($icons-sprites));
+    @include background-size($icons-sprites-width auto);
+    background-image: sprite-url($icons_2x-sprites);
+  }
+}
+
+@include all-icons-sprites;

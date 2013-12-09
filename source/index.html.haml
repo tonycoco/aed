@@ -1,0 +1,208 @@
+- content_for(:page_class) { "homepage" }
+
+%header.header
+  .inner
+
+.hero
+  .inner
+    #slider
+      = image_tag "placeholder/slider-1.jpg", :'data-title' => "First lorem ipsum dolor sit amet, consectetur amet adipiscing elit. Adipiscing elit yet dolor."
+      = image_tag "placeholder/slider-2.jpg", :'data-title' => "Second adipiscing elit yet dolor. Lorem ipsum dolor sit amet."
+    %section.main
+      .slider-overlay
+        %p#slider-overlay-text
+        #slider-pager
+    %aside.sidebar
+      .find-a-professional
+        .inner
+          %form.finder
+            %input.input{ type: "text", placeholder: "Zip Code" }
+            %input.button{ type: "submit", value: "Search" }
+          .title
+            %h4 Find a Professional
+            %p Search for a professional to help you in your area...
+      %ul.panels
+        %li
+          = link_to "Join Now!", "#", class: "button"
+          %p Learn more about member benefits and networking!
+        %li
+          = link_to "Donate", "#", class: "button"
+          %p Help make a difference. Make a donation today!
+        %li
+          = link_to "Career Center", "#", class: "button"
+          %p Full-service online resource.
+.content
+  .inner
+    %section.main.accordion
+      %h3= link_to '<i class="icon-news"></i> News', "#news"
+      #news
+        %ul
+          %li
+            %h4= link_to "Test Title 1", "#"
+            %p Lorem ipsum dolor sit amet. Facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 1", "#"
+            %p Lorem ipsum dolor sit amet. Elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 1", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+      %h3= link_to '<i class="icon-publications"></i> Publications', "#publications"
+      #publications
+        %ul
+          %li
+            %h4= link_to "Test Title 2", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 2", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+          %li
+            %h4= link_to "Test Title 2", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+
+      %h3= link_to '<i class="icon-resources"></i> Resources', "#resources"
+      #resources
+        %ul
+          %li
+            %h4= link_to "Test Title 3", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+          %li
+            %h4= link_to "Test Title 3", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 3", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+      %h3= link_to '<i class="icon-bookstore"></i> AED Bookstore', "#bookstore"
+      #bookstore
+        %ul
+          %li
+            %h4= link_to "Test Title 4", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 4", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+          %li
+            %h4= link_to "Test Title 4", "#"
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+    %section.main.tabs
+      %ul
+        %li= link_to '<i class="icon-news"></i> News', "#news"
+        %li= link_to '<i class="icon-publications"></i> Publications', "#publications"
+        %li= link_to '<i class="icon-resources"></i> Resources', "#resources"
+        %li= link_to '<i class="icon-bookstore"></i> AED Bookstore', "#bookstore"
+      .inner
+        #news
+          %ul
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet. Facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet. Elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet. Facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet. Facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 1", "#"
+              %p Lorem ipsum dolor sit amet. Facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+        #publications
+          %ul
+            %li
+              %h4= link_to "Test Title 2", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 2", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+            %li
+              %h4= link_to "Test Title 2", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+        #resources
+          %ul
+            %li
+              %h4= link_to "Test Title 3", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh.
+            %li
+              %h4= link_to "Test Title 3", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 3", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        #bookstore
+          %ul
+            %li
+              %h4= link_to "Test Title 4", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 4", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+            %li
+              %h4= link_to "Test Title 4", "#"
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod velit aliquam elit facilisis dignissim. Mauris at purus sagittis felis elementum sagittis sed nec nibh. Donec non ultrices sapien.
+    %aside.sidebar
+      %section.widget.event-calendar
+        %h4
+          %i.icon-calendar
+          Event Calendar
+        .inner
+          %ul
+            %li
+              %span.date 10/14
+              = link_to "Test content goes here 1.", "#"
+            %li
+              %span.date 10/15
+              = link_to "Test content goes here 2.", "#"
+            %li
+              %span.date 10/19
+              = link_to "Test content goes here 3.", "#"
+          .bottom
+            = link_to "View More", "#", class: "view-more"
+      %section.widget.twitter
+        %h4
+          %i.icon-twitter
+          Twitter
+          = link_to "Follow @aedweb", "https://twitter.com/aedweb", class: "twitter-follow-button", :'data-show-count' => "false", :'data-show-screen-name' => "false"
+        .inner
+          .tweet-bubble
+            = link_to "Loading...", "https://twitter.com/aedweb", class: "twitter-timeline", :'data-widget-id' => "408482288276475904", :'data-chrome' => "nofooter noborders noheader transparent", :'data-tweet-limit' => "1"
+          .bottom
+            = link_to "@aedweb", "https://twitter.com/aedweb", class: "handle"
+            = link_to "View More", "https://twitter.com/aedweb", class: "view-more"
+      %section.widget.dark.youtube
+        %h4
+          %i.icon-youtube
+          Latest Videos
+        .inner
+          #youtube-feed
+          .bottom
+            = link_to "View More", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "view-more"
+
+%footer.footer
+  .inner
+    %ul.social-badges
+      %li= link_to "Google+", "#", class: "badge icons-dark-gplus"
+      %li= link_to "Facebook", "https://www.facebook.com/pages/Academy-for-Eating-Disorders/56454591652", class: "badge icons-dark-facebook"
+      %li= link_to "LinkedIn", "http://www.linkedin.com/groups?about=&gid=1208317&trk=anet_ug_grppro", class: "badge icons-dark-linkedin"
+      %li= link_to "YouTube", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "badge icons-dark-youtube"
+      %li= link_to "Twitter", "https://twitter.com/aedweb", class: "badge icons-dark-twitter"
+    %nav.links
+      %ul.column
+        %li= link_to "Home", "#"
+        %li= link_to "Contact", "#"
+        %li= link_to "Sitemap", "#"
+        %li= link_to "Join AED", "#"
+        %li= link_to "AED Forum", "#"
+        %li= link_to "Newsletter", "#"
+      %ul.column
+        %li= link_to "Position Statements", "#"
+        %li= link_to "Press Releases", "#"
+        %li= link_to "Bookstore", "#"
+        %li= link_to "Reading List", "#"
+        %li= link_to "Past Awards and Honors", "#"
+      %ul.column
+        %li= link_to "Privacy Policy", "#"
