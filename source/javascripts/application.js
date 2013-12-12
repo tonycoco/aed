@@ -30,6 +30,24 @@ $("#slider").cycle({
   fx: "scrollHorz"
 });
 
+$(".menu-icon").click(function(event) {
+  event.preventDefault();
+  $("body").toggleClass("menu-open");
+});
+
+$(document).mouseup(function(event) {
+  var $body = $("body");
+
+  if ($body.hasClass("menu-open")) {
+    var $menu = $("#menu");
+
+    if (!$menu.is(event.target) && $menu.has(event.target).length === 0) {
+      event.preventDefault();
+      $body.toggleClass("menu-open");
+    }
+  }
+});
+
 $.ajax({
   type: "GET",
   url: "https://gdata.youtube.com/feeds/users/AEDvideoarchive/uploads?alt=json-in-script&max-results=2",
@@ -48,3 +66,10 @@ $.ajax({
     $("#youtube-feed").html(html.join(''));
   }
 });
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}

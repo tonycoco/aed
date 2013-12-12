@@ -6,7 +6,6 @@
     "jquery-ui": "1.10.3",
     "normalize-scss": "2.1.2",
     "fastclick": "0.6.10",
-    "sass-hidpi": "2.0.0",
     "cycle2": "https://raw.github.com/malsup/malsup.github.com/master/jquery.cycle2.js"
   }
 }

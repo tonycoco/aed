@@ -8,7 +8,6 @@
   }
 
   h4 {
-    margin: 0;
     padding: em(15);
     background-color: #dfdfdf;
     color: #828282;
@@ -25,10 +24,6 @@
 
   > .inner {
     padding: em(15);
-
-    p {
-      margin: 0;
-    }
 
     .bottom {
       @include clearfix;
@@ -79,10 +74,6 @@
     }
 
     ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-
       li {
         margin-bottom: em(10);
         font-size: em(13);
@@ -90,8 +81,9 @@
         .date {
           color: #828287;
           font-weight: bold;
-          width: 2.75em;
           display: inline-block;
+          float: left;
+          line-height: 1.2;
           font-weight: normal;
         }
 
@@ -99,6 +91,9 @@
           font-weight: bold;
           text-decoration: none;
           color: #393946;
+          display: block;
+          margin-left: 2.975em;
+          line-height: 1.2;
 
           &:hover {
             text-decoration: underline;
@@ -180,9 +175,6 @@
 
       #youtube-feed {
         ul {
-          margin: 0;
-          padding: 0;
-          list-style-type: none;
           @include clearfix;
 
           li {

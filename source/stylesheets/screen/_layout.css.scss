@@ -1,3 +1,13 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 html,
 body {
   height: 100%;
@@ -8,6 +18,40 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 100%;
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, textarea, select {
+  -webkit-appearance: none;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input {
+  background: #fff;
+  border: 1px solid #dadada;
+  font-size: em(13);
+  padding: em(4) em(6);
+  border-radius: 0;
+}
+
+p {
   line-height: 1.2;
 }
 
@@ -18,7 +62,32 @@ img {
 #viewport {
   height: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+#page {
+  position: relative;
+  overflow: scroll;
+  height: 100%;
+}
+
+#menu {
+  background: #32394a;
+  min-height: 100%;
+  overflow: hidden;
+  width: 256px;
+  position: fixed;
+  left: -256px;
+}
+
+body.menu-open {
+  #menu {
+    left: 0px;
+  }
+
+  #page {
+    left: 256px;
+  }
 }
 
 .header,
@@ -53,11 +122,6 @@ img {
       }
     }
   }
-}
-
-.header {
-  background-color: #fff;
-  height: 150px;
 }
 
 .content {

@@ -8,6 +8,8 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" }
     %meta{ name: "description", content: page_description }
     %meta{ name: "twitter:site", content: "@aedweb" }
+    %meta{ name: "google-translate-customization", content: "71cb5c013695f93d-fe74d99ac133704e-g0980a9e175ac5409-e" }
+    %meta{ name: "apple-mobile-web-app-capable", content: "yes" }
 
     / [if (lt IE 9) & (!IEMobile 7)]
       = javascript_include_tag "//html5shiv.googlecode.com/svn/trunk/html5.js"
@@ -15,9 +17,13 @@
     = stylesheet_link_tag "application"
   %body{ class: page_classes }
     #viewport
-      = yield
+      #menu
+        MENU
+      #page
+        = yield
 
     = javascript_include_tag "application"
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    = javascript_include_tag "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
     = google_analytics_tag

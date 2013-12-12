@@ -4,29 +4,11 @@
 
   > .inner {
     > .social-badges {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
       float: right;
-
-      li {
-        margin-left: em(8);
-        float: left;
-
-        .badge {
-          width: 25px;
-          height: 25px;
-          display: block;
-          @include hide-text;
-        }
-      }
     }
 
     > .links {
       .column {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
         margin-right: em(50);
 
         @include media($tablet) {
