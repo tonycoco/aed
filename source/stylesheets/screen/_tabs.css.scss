@@ -43,7 +43,11 @@
         }
 
         &:hover {
-          background-color: rgba(255,255,255,.1);
+          background-color: lighten($green, 5%);
+
+          i:before {
+            color: lighten(#7bbf7f, 10%);
+          }
         }
 
         i:before {

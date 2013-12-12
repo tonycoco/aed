@@ -72,21 +72,21 @@ img {
 }
 
 #menu {
-  background: #32394a;
   min-height: 100%;
-  overflow: hidden;
+  overflow: scroll;
   width: 256px;
+  height: 100%;
   position: fixed;
-  left: -256px;
+  right: -256px;
 }
 
 body.menu-open {
   #menu {
-    left: 0px;
+    right: 0px;
   }
 
   #page {
-    left: 256px;
+    right: 256px;
   }
 }
 

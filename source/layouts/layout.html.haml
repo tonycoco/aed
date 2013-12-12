@@ -18,7 +18,13 @@
   %body{ class: page_classes }
     #viewport
       #menu
-        MENU
+        %h3= link_to '<i class="icon-menu"></i> Menu', "#", class: "menu-icon"
+        %ul.links
+          %li= link_to "Link", "#"
+          %li= link_to "Link", "#"
+          %li= link_to "Link", "#"
+          %li= link_to "Link", "#"
+          %li= link_to "Link", "#"
       #page
         = yield
 

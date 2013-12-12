@@ -1,17 +1,10 @@
 //= require jquery
-//= require fastclick
 //= require jquery-ui/ui/jquery.ui.core
 //= require jquery-ui/ui/jquery.ui.widget
 //= require jquery-ui/ui/jquery.ui.tabs
 //= require jquery-ui/ui/jquery.ui.accordion
 //= require cycle2
 //= require_self
-
-$(function() {
-  if (typeof FastClick !== 'undefined') {
-    FastClick.attach(document.body);
-  }
-});
 
 $(".tabs").tabs({
   heightStyle: "auto"
@@ -28,6 +21,17 @@ $("#slider").cycle({
   pager: "#slider-pager",
   overlayTemplate: "{{title}}",
   fx: "scrollHorz"
+});
+
+$(".nav .top-links a").on("mouseover", function(event) {
+  $(".nav .top-links a").removeClass("hovering");
+  $(this).addClass("hovering");
+  $(".nav .subnav").addClass("open");
+});
+
+$(".nav").on("mouseleave", function(event) {
+  $(".nav .subnav").removeClass("open");
+  $(".nav .top-links a").removeClass("hovering");
 });
 
 $(".menu-icon").click(function(event) {

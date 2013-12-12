@@ -52,36 +52,41 @@
       }
 
       .heading {
-        margin-bottom: em(10);
+        @include media($tablet) {
+          margin-bottom: em(10);
+        }
 
         a {
           display: block;
         }
       }
 
-      .subheading {
-        .menu-icon {
-          position: absolute;
-          bottom: 0px;
-          right: 0px;
-          text-transform: uppercase;
-          text-decoration: none;
-          font-size: em(12);
-          display: block;
-          text-align: right;
-          font-weight: bold;
+      .slogan {
+        margin-bottom: em(15);
 
-          @include media($tablet) {
-            display: none;
-          }
+        @include media($tablet) {
+          margin-bottom: 0;
+        }
+      }
+
+      .menu-icon {
+        position: absolute;
+        bottom: -8px;
+        right: 0px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: em(12);
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        color: #82818f;
+
+        @include media($tablet) {
+          display: none;
         }
 
-        .slogan {
-          margin-right: 50px;
-
-          @include media($tablet) {
-            margin-right: 0;
-          }
+        i {
+          margin-left: .25em;
         }
       }
     }
@@ -139,8 +144,7 @@
   }
 
   .nav {
-    @include linear-gradient(#745d94, #370b72);
-    overflow: hidden;
+    @include linear-gradient(#755b99, #360a71);
     border-bottom-left-radius: 10px;
     position: relative;
     display: none;
@@ -152,26 +156,36 @@
     a {
       color: #fff;
       font-weight: bold;
-      font-size: em(13);
       display: inline-block;
       line-height: 1;
-      padding: em(5);
+      padding: em(5) 0;
       text-decoration: none;
+      position: relative;
+      z-index: 999;
+      font-size: 0.65em;
 
-      &:hover {
+      @include media($desktop) {
+        font-size: em(13);
+      }
+
+      &:hover,
+      &.hovering {
+        background: #352050;
+
         span {
-          text-decoration: underline;
+          border-color: #352050;
         }
       }
 
       span {
         border-left: 1px solid #9379b5;
-        padding: em(10) em(15);
+        border-color: rgba(255,255,255,.1);
+        padding: em(12) em(18);
         display: inline-block;
       }
     }
 
-    ul {
+    .top-links {
       @include clearfix;
 
       li {
@@ -191,15 +205,38 @@
       position: absolute;
       top: 0px;
       right: 0px;
+      bottom: 0px;
       background: $green;
+
+      &:hover {
+        background: lighten($green, 5%);
+      }
 
       span {
         border: 0;
-      }
 
-      i {
-        margin-right: .5em;
-        font-size: 85%;
+        i {
+          font-size: 85%;
+        }
+      }
+    }
+
+    .subnav {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      width: 100%;
+      height: 200px;
+      background: #352050;
+      z-index: 888;
+      margin-top: -1px;
+      display: none;
+      border-top: 1px solid #674a90;
+      box-shadow: 3px 0 7px rgba(0,0,0,.3);
+      padding: em(15) em(20);
+
+      &.open {
+        display: block;
       }
     }
   }

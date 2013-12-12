@@ -1,0 +1,32 @@
+#menu {
+  background: #32394a;
+  color: #82818f;
+
+  a {
+    color: #82818f;
+    text-decoration: none;
+  }
+
+  h3 {
+    a {
+      padding: em(10) em(15);
+      display: block;
+      text-transform: uppercase;
+
+      i {
+        margin-right: .25em;
+      }
+    }
+  }
+
+  ul {
+    li {
+      border-top: 1px solid #111;
+
+      a {
+        padding: em(10) em(15);
+        display: block;
+      }
+    }
+  }
+}
