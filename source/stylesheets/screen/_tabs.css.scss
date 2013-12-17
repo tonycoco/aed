@@ -15,7 +15,7 @@
       float: left;
 
       &.ui-tabs-active {
-        background-color: #fff;
+        background-color: #fff !important;
 
         a {
           color: #575761;
@@ -23,6 +23,14 @@
 
           i:before {
             color: #b0b0b6;
+          }
+
+          &:hover {
+            background-color: #fff;
+
+            i:before {
+              color: #b0b0b6;
+            }
           }
         }
       }

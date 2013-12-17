@@ -1,4 +1,4 @@
-//= require jquery
+//= require jquery/jquery
 //= require jquery-ui/ui/jquery.ui.core
 //= require jquery-ui/ui/jquery.ui.widget
 //= require jquery-ui/ui/jquery.ui.tabs
@@ -24,30 +24,38 @@ $("#slider").cycle({
 });
 
 $(".nav .top-links a").on("mouseover", function(event) {
-  $(".nav .top-links a").removeClass("hovering");
-  $(this).addClass("hovering");
-  $(".nav .subnav").addClass("open");
+  var $target = $(event.target).closest("a");
+  var selector = $target.attr("href");
+
+  $(".nav .subnav > .inner").removeClass("active");
+
+  $(".nav .top-links a").removeClass("active");
+  $(".nav .top-links a").removeClass("active");
+
+  $(this).addClass("active");
+  $(".nav .subnav").addClass("active");
+  $(selector).addClass("active");
 });
 
 $(".nav").on("mouseleave", function(event) {
-  $(".nav .subnav").removeClass("open");
-  $(".nav .top-links a").removeClass("hovering");
+  $(".nav .subnav").removeClass("active");
+  $(".nav .top-links a").removeClass("active");
 });
 
 $(".menu-icon").click(function(event) {
   event.preventDefault();
-  $("body").toggleClass("menu-open");
+  $("body").toggleClass("menu-active");
 });
 
 $(document).mouseup(function(event) {
   var $body = $("body");
 
-  if ($body.hasClass("menu-open")) {
+  if ($body.hasClass("menu-active")) {
     var $menu = $("#menu");
 
     if (!$menu.is(event.target) && $menu.has(event.target).length === 0) {
       event.preventDefault();
-      $body.toggleClass("menu-open");
+      $body.toggleClass("menu-active");
     }
   }
 });

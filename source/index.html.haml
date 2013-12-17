@@ -26,17 +26,40 @@
 
     %nav.nav
       %ul.top-links
-        %li= link_to "<span>About AED</span>", "#"
-        %li= link_to "<span>Eating Disorders Information</span>", "#"
-        %li= link_to "<span>Conference &amp; Education</span>", "#"
-        %li= link_to "<span>Get Involved</span>", "#"
+        %li= link_to "<span>About AED</span>", "#subnav-1"
+        %li= link_to "<span>Eating Disorders Information</span>", "#subnav-2"
+        %li= link_to "<span>Conference &amp; Education</span>", "#subnav-3"
+        %li= link_to "<span>Get Involved</span>", "#subnav-4"
       = link_to '<span><i class="icon-account"></i> Members</span>', "#", class: "account"
       .subnav
-        %ul
-          %li= link_to "Link", "#"
-          %li= link_to "Link", "#"
-          %li= link_to "Link", "#"
-          %li= link_to "Link", "#"
+        .inner#subnav-1
+          %h4 About AED
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-2
+          %h4 Eating Disorders Information
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-3
+          %h4 Conference &amp; Education
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-4
+          %h4 Get Involved
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
 .hero
   .inner
     #slider
