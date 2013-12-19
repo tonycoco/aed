@@ -3,7 +3,7 @@
 <extension version="3.0" type="template" client="site">
   <name>Academy for Eating Disorders</name>
   <version>1.0</version>
-  <creationDate>December 2013</creationDate>
+  <creationDate>21 December 2013</creationDate>
   <author>Tony Coconate</author>
   <authorEmail>me@tonycoconate.com</authorEmail>
   <authorUrl>http://www.tonycoconate.com</authorUrl>
@@ -11,7 +11,7 @@
   <description>The Academy for Eating Disorders is a global professional association committed to leadership in eating disorders research, education, treatment and prevention.</description>
 
   <files>
-    <folder>css</folder>
+    <folder>stylesheets</folder>
     <folder>images</folder>
     <folder>javascripts</folder>
     <filename>index.html</filename>
@@ -33,6 +33,7 @@
   <positions>
     <position>search</position>
     <position>menu</position>
+    <position>breadcrumbs</position>
     <position>content</position>
     <position>sidebar</position>
     <position>footer</position>
@@ -40,10 +41,5 @@
   </positions>
 
   <config>
-    <fields name="params">
-      <fieldset name="basic">
-        <field name="googleanalytics" type="text" default="UA-11111111-1" label="Google Analytics ID" description="Google Analytics ID" filter="string" />
-      </fieldset>
-    </fields>
   </config>
 </extension>

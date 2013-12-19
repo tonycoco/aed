@@ -1,8 +1,6 @@
 require "config/helpers"
 require "fog"
 
-Fog.credentials = { path_style: true }
-
 helpers do
   include ApplicationHelpers
 end
@@ -18,18 +16,13 @@ ready do
 end
 
 configure :build do
-  activate :cache_buster
   activate :favicon_maker
-  activate :gzip
-  activate :minify_css
-  activate :minify_javascript
   activate :smusher
   activate :relative_assets
 end
 
 activate :directory_indexes
 activate :livereload, host: "aed.dev"
-activate :syntax
 activate :sprockets
 
 activate :google_analytics do |ga|
