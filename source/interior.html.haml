@@ -1,0 +1,151 @@
+- content_for(:page_class) { "homepage" }
+
+%header.header
+  .inner
+    = link_to "Academy for Eating Disorders", "/", class: "logo"
+    .top
+      .left
+        %h2.heading
+          = link_to "/" do
+            = image_tag "heading.png", alt: "Academy for Eating Disorders"
+        %p.slogan= image_tag "slogan.png", alt: "Prevention. Treatment. Research. Education."
+        = link_to 'Menu <i class="icon-menu"></i>', "#", class: "menu-icon"
+      .right
+        .action-bar
+          #google_translate_element
+          %form.form
+            .input
+              %i.icon-search
+              %input{ type: "text", placeholder: "Search" }
+        %ul.social-badges
+          %li= link_to "Google+", "#", class: "badge icons-gplus"
+          %li= link_to "Facebook", "https://www.facebook.com/pages/Academy-for-Eating-Disorders/56454591652", class: "badge icons-facebook"
+          %li= link_to "LinkedIn", "http://www.linkedin.com/groups?about=&gid=1208317&trk=anet_ug_grppro", class: "badge icons-linkedin"
+          %li= link_to "YouTube", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "badge icons-youtube"
+          %li= link_to "Twitter", "https://twitter.com/aedweb", class: "badge icons-twitter"
+
+    %nav.nav
+      %ul.top-links
+        %li= link_to "<span>About AED</span>", "#subnav-1"
+        %li= link_to "<span>Eating Disorders Information</span>", "#subnav-2"
+        %li= link_to "<span>Conference &amp; Education</span>", "#subnav-3"
+        %li= link_to "<span>Get Involved</span>", "#subnav-4"
+      = link_to '<span><i class="icon-account"></i> Members</span>', "#", class: "account"
+      .subnav
+        .inner#subnav-1
+          %h4 About AED
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-2
+          %h4 Eating Disorders Information
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-3
+          %h4 Conference &amp; Education
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+        .inner#subnav-4
+          %h4 Get Involved
+          %ul
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+            %li= link_to "Link", "#"
+
+.content
+  .inner
+    %section.main
+      .category-list
+        %div
+          .content-category
+            %h2 News
+            .category-desc
+              %p Test this description of the news category.
+              .clr
+            %form#adminForm.form-inline{ action: "http://joomla.dev/all-news", method: "post", name: "adminForm" }
+              / %fieldset.filters.btn-toolbar.clearfix
+              /   .btn-group.pull-right
+              /     %label.element-invisible
+              /       Display #
+              /     %select#limit{ name: "limit", class: "inputbox input-mini", size: "1", onchange: "this.form.submit()" }
+              /       %option 5
+              %table.category.table.table-striped.table-bordered.table-hover
+                %tbody
+                  %tr.cat-list-row0
+                    %td.list-title{ headers: "categorylist_header_title" }
+                      %a{ href: "/another-test-article" } Another Test Article
+                  %tr.cat-list-row1
+                    %td.list-title{ headers: "categorylist_header_title" }
+                      %a{ href: "/test-article" } Test Article
+
+    %aside.sidebar
+      %section.widget.event-calendar
+        %h4
+          %i.icon-calendar
+          Event Calendar
+        .inner
+          %ul
+            %li
+              %span.date 10/14
+              = link_to "Test content goes here 1.", "#"
+            %li
+              %span.date 10/15
+              = link_to "Test content goes here 2.", "#"
+            %li
+              %span.date 10/19
+              = link_to "Test content goes here 3.", "#"
+          .bottom
+            = link_to "View More", "#", class: "view-more"
+      %section.widget.twitter
+        %h4
+          %i.icon-twitter
+          Twitter
+          = link_to "Follow @aedweb", "https://twitter.com/aedweb", class: "twitter-follow-button", :'data-show-count' => "false", :'data-show-screen-name' => "false"
+        .inner
+          .tweet-bubble
+            = link_to "Loading...", "https://twitter.com/aedweb", class: "twitter-timeline", :'data-widget-id' => "408482288276475904", :'data-chrome' => "nofooter noborders noheader transparent", :'data-tweet-limit' => "1"
+          .bottom
+            = link_to "@aedweb", "https://twitter.com/aedweb", class: "handle"
+            = link_to "View More", "https://twitter.com/aedweb", class: "view-more"
+      %section.widget.dark.youtube
+        %h4
+          %i.icon-youtube
+          Latest Videos
+        .inner
+          #youtube-feed
+          .bottom
+            = link_to "View More", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "view-more"
+
+%footer.footer
+  .inner
+    %ul.social-badges
+      %li= link_to "Google+", "#", class: "badge icons-gplus-dark"
+      %li= link_to "Facebook", "https://www.facebook.com/pages/Academy-for-Eating-Disorders/56454591652", class: "badge icons-facebook-dark"
+      %li= link_to "LinkedIn", "http://www.linkedin.com/groups?about=&gid=1208317&trk=anet_ug_grppro", class: "badge icons-linkedin-dark"
+      %li= link_to "YouTube", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "badge icons-youtube-dark"
+      %li= link_to "Twitter", "https://twitter.com/aedweb", class: "badge icons-twitter-dark"
+    %nav.links
+      %ul.column
+        %li= link_to "Home", "#"
+        %li= link_to "Contact", "#"
+        %li= link_to "Sitemap", "#"
+        %li= link_to "Join AED", "#"
+        %li= link_to "AED Forum", "#"
+        %li= link_to "Newsletter", "#"
+      %ul.column
+        %li= link_to "Position Statements", "#"
+        %li= link_to "Press Releases", "#"
+        %li= link_to "Bookstore", "#"
+        %li= link_to "Reading List", "#"
+        %li= link_to "Past Awards and Honors", "#"
+      %ul.column
+        %li= link_to "Privacy Policy", "#"

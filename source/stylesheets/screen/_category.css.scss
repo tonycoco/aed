@@ -1,0 +1,39 @@
+.category-list {
+  .content-category {
+    h2 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-bottom: em(5);
+    }
+
+    .category-desc {
+      margin-bottom: em(20);
+    }
+
+    form {
+      margin-bottom: em(30);
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(67,56,13,.25);
+      padding: em(10) em(20);
+
+      table.category {
+        width: 100%;
+
+        .list-title {
+          padding: em(5) 0;
+        }
+
+        a {
+          font-weight: bold;
+          color: #362a48;
+          font-size: em(14);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

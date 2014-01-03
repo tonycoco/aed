@@ -50,16 +50,6 @@
   > div {
     padding: 0 em(20) em(15) em(20);
 
-    ul {
-      li {
-        margin-bottom: em(15);
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
     h4 {
       margin-bottom: em(5);
       font-size: em(14);
@@ -77,6 +67,11 @@
     p {
       color: #979798;
       font-size: em(13);
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
