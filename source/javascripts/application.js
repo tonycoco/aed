@@ -25,21 +25,28 @@ $("#slider").cycle({
 
 $(".nav .top-links a").on("mouseover", function(event) {
   var $target = $(event.target).closest("a");
-  var selector = $target.attr("href");
+  var $image = $target.siblings(".submenu-image");
+  var content = $target.siblings(".submenu-items").first().html();
 
-  $(".nav .subnav > .inner").removeClass("active");
+  $(".nav .subnav > .inner").removeClass("hovering");
+  $(".nav .top-links a").removeClass("hovering");
+  $(".nav .subnav > .inner .subnav-image").remove();
+  $(".nav .subnav > .inner ul").remove();
 
-  $(".nav .top-links a").removeClass("active");
-  $(".nav .top-links a").removeClass("active");
+  $(this).addClass("hovering");
+  $(".nav .subnav").addClass("hovering");
 
-  $(this).addClass("active");
-  $(".nav .subnav").addClass("active");
-  $(selector).addClass("active");
+  if ($image.length > 0) {
+    $(".nav .subnav > .inner").append('<div class="subnav-image"></div>');
+    $(".nav .subnav > .inner .subnav-image").html($image.first().html());
+  }
+  $(".nav .subnav > .inner").append("<ul></ul>");
+  $(".nav .subnav > .inner ul").html(content);
 });
 
-$(".nav").on("mouseleave", function(event) {
-  $(".nav .subnav").removeClass("active");
-  $(".nav .top-links a").removeClass("active");
+$(".nav").on("mouseleave", function() {
+  $(".nav .subnav").removeClass("hovering");
+  $(".nav .top-links a").removeClass("hovering");
 });
 
 $(".menu-icon").click(function(event) {
@@ -63,7 +70,7 @@ $(document).mouseup(function(event) {
 $.ajax({
   type: "GET",
   url: "https://gdata.youtube.com/feeds/users/AEDvideoarchive/uploads?alt=json-in-script&max-results=2",
-  dataType:'jsonp',
+  dataType: "jsonp",
   success: function(data){
     var html = ['<ul>'];
     $(data.feed.entry).each(function() {
@@ -72,16 +79,16 @@ $.ajax({
       var description = this.media$group.media$description.$t;
       html.push('<li><a href="' + url + '">');
       html.push('<img src="' + urlThumbnail + '" alt="' + description + '">');
-      html.push('</a></li>');
+      html.push("</a></li>");
     });
-    html.push('</ul>');
-    $("#youtube-feed").html(html.join(''));
+    html.push("</ul>");
+    $("#youtube-feed").html(html.join(""));
   }
 });
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-    pageLanguage: 'en',
+    pageLanguage: "en",
     layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
+  }, "google_translate_element");
 }

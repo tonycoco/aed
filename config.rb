@@ -7,7 +7,7 @@ end
 
 set :css_dir, "stylesheets"
 set :fonts_dir, "fonts"
-set :haml, { format: :html5 }
+set :haml, format: :html5
 set :images_dir, "images"
 set :js_dir, "javascripts"
 

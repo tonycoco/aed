@@ -19,13 +19,24 @@
     }
   }
 
-  ul {
-    li {
+  ul.top-links {
+    > li {
       border-top: 1px solid #111;
+      font-size: em(15);
 
       a {
         padding: em(10) em(15);
         display: block;
+      }
+
+      .submenu-image {
+        display: none;
+      }
+
+      ul.submenu-items {
+        font-size: em(13);
+        list-style-type: disc;
+        margin-left: 3em;
       }
     }
   }
