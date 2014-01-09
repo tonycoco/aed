@@ -19,7 +19,7 @@ $(".accordion").accordion({
 $("#slider").cycle({
   overlay: "#slider-overlay-text",
   pager: "#slider-pager",
-  overlayTemplate: "{{title}}",
+  overlayTemplate: '<a href="{{url}}">{{title}}</a>',
   fx: "scrollHorz"
 });
 
