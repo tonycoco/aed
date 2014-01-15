@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>Academy for Eating Disorders</name>
+  <version>1.0</version>
+  <creationDate>12/1/2013</creationDate>
+  <author>Tony Coconate</author>
+  <authorEmail>me@tonycoconate.com</authorEmail>
+  <authorUrl>http://www.tonycoconate.com</authorUrl>
+  <copyright>Copyright (C) 2013 Tony Coconate. All rights reserved.</copyright>
+  <description>The Academy for Eating Disorders is a global professional association committed to leadership in eating disorders research, education, treatment and prevention.</description>
+  <license></license>
+
+	<files>
+		<filename>component.php</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>template_preview.png</filename>
+    <filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+    <filename>favicon.ico</filename>
+    <filename>favicon.png</filename>
+    <filename>apple-touch-icon-114x114-precomposed.png</filename>
+    <filename>apple-touch-icon-120x120-precomposed.png</filename>
+    <filename>apple-touch-icon-144x144-precomposed.png</filename>
+    <filename>apple-touch-icon-57x57-precomposed.png</filename>
+    <filename>apple-touch-icon-72x72-precomposed.png</filename>
+    <filename>apple-touch-icon-precomposed.png</filename>
+    <filename>apple-touch-icon.png</filename>
+
+		<folder>css</folder>
+    <folder>fonts</folder>
+    <folder>html</folder>
+    <folder>images</folder>
+    <folder>includes</folder>
+    <folder>javascripts</folder>
+	</files>
+
+	<positions>
+		<position>search-bar</position>
+    <position>breadcrumb</position>
+    <position>slideshow</position>
+    <position>panels</position>
+    <position>top-links</position>
+    <position>submenu</position>
+    <position>mobile-navigation</position>
+    <position>tabs-news</position>
+    <position>tabs-publications</position>
+    <position>tabs-resources</position>
+    <position>tabs-bookstore</position>
+    <position>sidebar-frontpage</position>
+    <position>sidebar-article</position>
+    <position>footer-links</position>
+	</positions>
+
+	<config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="googleanalytics" type="text" default="UA-11111111-1" label="Google Analytics ID" description="Google Analytics ID" filter="string" />
+        <field name="youtube" type="text" default="http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A" label="YouTube Channel URL" description="YouTube Channel URL" filter="string" />
+        <field name="twitter" type="text" default="https://twitter.com/aedweb" label="Twitter URL" description="Twitter URL" filter="string" />
+        <field name="facebook" type="text" default="https://www.facebook.com/pages/Academy-for-Eating-Disorders/56454591652" label="Facebook URL" description="Facebook URL" filter="string" />
+        <field name="linkedin" type="text" default="http://www.linkedin.com/groups?about=&amp;gid=1208317&amp;trk=anet_ug_grppro" label="LinkedIn Group URL" description="LinkedIn Group URL" filter="string" />
+        <field name="gplus" type="text" default="#" label="Google+ URL" description="Google+ URL" filter="string" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>
