@@ -16,7 +16,7 @@
     display: block;
     position: absolute;
     top: 50%;
-    left: 0px;
+    left: 0;
     background: url(image-path("logo.png")) no-repeat;
     width: 34px;
     height: 51px;
@@ -72,7 +72,7 @@
       .menu-icon {
         position: absolute;
         bottom: -8px;
-        right: 0px;
+        right: 0;
         text-transform: uppercase;
         text-decoration: none;
         font-size: em(12);
@@ -187,7 +187,7 @@
 
         span {
           border-left: 1px solid #9379b5;
-          border-color: rgba(255,255,255,.1);
+          border-color: rgba(255, 255, 255, .1);
           padding: em(12) em(18);
           display: inline-block;
         }
@@ -208,9 +208,9 @@
 
     .account {
       position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
+      top: 0;
+      right: 0;
+      bottom: 0;
       background: $green;
       color: #fff;
       font-weight: bold;
@@ -219,7 +219,7 @@
       padding: em(5) 0;
       text-decoration: none;
       z-index: 999;
-      font-size: 0.65em;
+      font-size: .65em;
 
       @include media($desktop) {
         font-size: em(13);

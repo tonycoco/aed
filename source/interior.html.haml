@@ -1,55 +1,83 @@
-- content_for(:page_class) { "homepage" }
+- content_for(:page_class) { "interior" }
+
+.breadcrumb-bar
+  .inner
+    %ul
+      %li
+        = link_to "Home", "#"
+        %span.divider &gt;
+      %li
+        = link_to "Section", "#"
+        %span.divider &gt;
+      %li
+        %span Active Link
+
+.title-bar
+  .inner
+    .other-links-heading
+      %h4 Other Links
+    .heading
+      %h1 Test Title
 
 .content
   .inner
-    %section.main
-      .category-list
-        %div
-          .content-category
-            %h2 News
-            .category-desc
-              %p Test this description of the news category.
-              .clr
-            %form#adminForm.form-inline{ action: "http://joomla.dev/all-news", method: "post", name: "adminForm" }
-              / %fieldset.filters.btn-toolbar.clearfix
-              /   .btn-group.pull-right
-              /     %label.element-invisible
-              /       Display #
-              /     %select#limit{ name: "limit", class: "inputbox input-mini", size: "1", onchange: "this.form.submit()" }
-              /       %option 5
-              %table.category.table.table-striped.table-bordered.table-hover
-                %tbody
-                  %tr.cat-list-row0
-                    %td.list-title{ headers: "categorylist_header_title" }
-                      %a{ href: "/another-test-article" } Another Test Article
-                  %tr.cat-list-row1
-                    %td.list-title{ headers: "categorylist_header_title" }
-                      %a{ href: "/test-article" } Test Article
+    %section.main-article
+      %aside.other-links
+        %ul
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
 
-    %aside.sidebar
+      %section.inner
+        :plain
+          <div class="item-page">
+                  <div class="page-header">
+              <h2>
+                                        <a href="/web/index.php/about-aed/our-mission"> Our Mission</a>
+                            </h2>
+            </div>
+
+
+
+
+                          <h1><strong>OUR MISSION</strong></h1>
+          <p>The Academy for Eating Disorders is a global professional association committed to leadership in eating disorders research, education, treatment and prevention.</p>
+          <h1><strong>OUR VISION</strong></h1>
+          <p>Global access to knowledge, research and best treatment practice for eating disorders.</p>
+          <h1><strong>OUR STRATEGIC GOALS</strong></h1>
+          <ol>
+          <li>Generate knowledge and integrate collective expertise about Eating Disorders.</li>
+          <li>Provide platforms for the promotion of understanding, sharing of knowledge, &amp; research-practice integration in the field of Eating Disorders.</li>
+          <li>Build capacity in the next generation of Eating Disorder professionals.</li>
+          <li>Foster innovation &amp; best practice by recognizing excellence in the field of Eating Disorders.</li>
+          </ol>
+                <div class="article-info muted">
+                <dl class="article-info">
+                <dt class="article-info-term">Details</dt>
+
+                                                  <dd class="category-name">
+                                                Category: <a href="/web/index.php/about-aed">About AED</a>                      </dd>
+                                    <dd class="published">
+                      <span class="icon-calendar"></span>
+                      Published: 14 January 2014          </dd>
+
+                                  </dl>
+              </div>
+
+                       </div>
+
+    %aside.sidebar-article
       %section.widget.related
         %h4 Related Articles
         %ul
           %li= link_to "Test 1", "#"
           %li= link_to "Test 2", "#"
           %li= link_to "Test 3", "#"
-      %section.widget.event-calendar
-        %h4
-          %i.icon-calendar
-          Event Calendar
-        .inner
-          %ul
-            %li
-              %span.date 10/14
-              = link_to "Test content goes here 1.", "#"
-            %li
-              %span.date 10/15
-              = link_to "Test content goes here 2.", "#"
-            %li
-              %span.date 10/19
-              = link_to "Test content goes here 3.", "#"
-          .bottom
-            = link_to "View More", "#", class: "view-more"
+
+      %section.widget.excerpt
+        %p This is a test excerpt from a while back. This is just a test.
+
       %section.widget.twitter
         %h4
           %i.icon-twitter

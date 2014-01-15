@@ -21,7 +21,17 @@ body {
   line-height: 1;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -34,7 +44,9 @@ table {
   border-spacing: 0;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   -webkit-appearance: none;
 }
 
@@ -82,7 +94,7 @@ img {
 
 body.menu-active {
   #menu {
-    right: 0px;
+    right: 0;
   }
 
   #page {
@@ -91,6 +103,8 @@ body.menu-active {
 }
 
 .header,
+.title-bar,
+.breadcrumb-bar,
 .hero,
 .content,
 .footer {
@@ -112,11 +126,27 @@ body.menu-active {
       }
     }
 
+    > .main-article {
+      @include media($tablet) {
+        @include span-columns(9);
+      }
+    }
+
     > .sidebar {
       margin-top: em(20);
 
       @include media($tablet) {
         @include span-columns(4);
+        @include omega();
+        margin-top: 0;
+      }
+    }
+
+    > .sidebar-article {
+      margin-top: em(20);
+
+      @include media($tablet) {
+        @include span-columns(3);
         @include omega();
         margin-top: 0;
       }
