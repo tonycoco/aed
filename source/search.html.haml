@@ -1,0 +1,267 @@
+- content_for(:page_class) { "interior" }
+
+.breadcrumb-bar
+  .inner
+    %ul
+      %li
+        = link_to "Home", "#"
+        %span.divider &gt;
+      %li
+        = link_to "Section", "#"
+        %span.divider &gt;
+      %li
+        %span Active Link
+
+.title-bar
+  .inner
+    .other-links-heading
+      %h4 Other Links
+    .heading
+      %h1 Test Title
+
+.content
+  .inner
+    %section.main-article
+      %aside.other-links
+        %ul
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
+          %li= link_to "Test", "#"
+
+      %section.inner
+        :plain
+          <div class="search">
+
+          <form id="searchForm" action="/search" method="post">
+
+            <div class="btn-toolbar">
+              <div class="btn-group pull-left">
+                <input type="text" name="searchword" placeholder="Search Keyword:" id="search-searchword" size="30" maxlength="20" value="test" class="inputbox">
+              </div>
+              <div class="btn-group pull-left">
+                <button name="Search" onclick="this.form.submit()" class="btn hasTooltip" title="Search"><span class="icon-search"></span></button>
+              </div>
+              <input type="hidden" name="task" value="search">
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="searchintro">
+                  <p><strong>Total: <span class="badge badge-info">8</span> results found.</strong></p>
+                </div>
+
+            <fieldset class="phrases">
+              <legend>Search for:   </legend>
+                <div class="phrases-box">
+                <div class="controls">
+            <label for="searchphraseall" id="searchphraseall-lbl" class="radio">
+
+            <input type="radio" name="searchphrase" id="searchphraseall" value="all" checked="checked">All words
+            </label>
+            <label for="searchphraseany" id="searchphraseany-lbl" class="radio">
+
+            <input type="radio" name="searchphrase" id="searchphraseany" value="any">Any words
+            </label>
+            <label for="searchphraseexact" id="searchphraseexact-lbl" class="radio">
+
+            <input type="radio" name="searchphrase" id="searchphraseexact" value="exact">Exact Phrase
+            </label></div>
+                </div>
+                <div class="ordering-box">
+                <label for="ordering" class="ordering">
+                  Ordering:     </label>
+                <select id="ordering" name="ordering" class="inputbox">
+            <option value="newest" selected="selected">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="popular">Most Popular</option>
+            <option value="alpha">Alphabetical</option>
+            <option value="category">Category</option>
+          </select>
+                </div>
+            </fieldset>
+
+                <fieldset class="only">
+              <legend>Search Only:</legend>
+                  <label for="area-categories" class="checkbox">
+                <input type="checkbox" name="areas[]" value="categories" id="area-categories">
+                Categories    </label>
+                  <label for="area-contacts" class="checkbox">
+                <input type="checkbox" name="areas[]" value="contacts" id="area-contacts">
+                Contacts    </label>
+                  <label for="area-content" class="checkbox">
+                <input type="checkbox" name="areas[]" value="content" id="area-content">
+                Articles    </label>
+                  <label for="area-newsfeeds" class="checkbox">
+                <input type="checkbox" name="areas[]" value="newsfeeds" id="area-newsfeeds">
+                Newsfeeds   </label>
+                  <label for="area-weblinks" class="checkbox">
+                <input type="checkbox" name="areas[]" value="weblinks" id="area-weblinks">
+                Weblinks    </label>
+                  <label for="area-events" class="checkbox">
+                <input type="checkbox" name="areas[]" value="events" id="area-events">
+                JEV_EVENTS_SEARCH   </label>
+                  </fieldset>
+
+
+            <div class="form-limit">
+              <label for="limit">
+                Display #   </label>
+              <select id="limit" name="limit" class="inputbox input-mini" size="1" onchange="this.form.submit()">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20" selected="selected">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="0">All</option>
+          </select>
+            </div>
+          <p class="counter">
+                </p>
+
+
+          </form>
+
+          <dl class="search-results">
+            <dt class="result-title">
+              1.          <a href="/86-panels/79-panel-1">
+                  Panel 1     </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Panels)
+                </span>
+              </dd>
+              <dd class="result-text">
+              <span class="highlight">Test</span> panel 1. &nbsp;...  </dd>
+                <dd class="result-created">
+                Created on 09 January 2014    </dd>
+              <dt class="result-title">
+              2.          <a href="/85-slideshow/78-slideshow-article">
+                  Slideshow article!      </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Slideshow)
+                </span>
+              </dd>
+              <dd class="result-text">
+              <span class="highlight">Test</span> 123! &nbsp;...  </dd>
+                <dd class="result-created">
+                Created on 09 January 2014    </dd>
+              <dt class="result-title">
+              3.          <a href="/82-resources/77-resource-test-article">
+                  Resource Test Article     </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Resources)
+                </span>
+              </dd>
+              <dd class="result-text">
+              Resource <span class="highlight">Test</span> Article stuff! &nbsp;... </dd>
+                <dd class="result-created">
+                Created on 28 December 2013   </dd>
+              <dt class="result-title">
+              4.          <a href="/83-bookstore/76-bookstore-test">
+                  Bookstore Test      </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Bookstore)
+                </span>
+              </dd>
+              <dd class="result-text">
+              <span class="highlight">Test</span> 123 &nbsp;... </dd>
+                <dd class="result-created">
+                Created on 28 December 2013   </dd>
+              <dt class="result-title">
+              5.          <a href="/81-publications/75-test-publication">
+                  Test Publication      </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Publications)
+                </span>
+              </dd>
+              <dd class="result-text">
+              Look at this publication!   </dd>
+                <dd class="result-created">
+                Created on 28 December 2013   </dd>
+              <dt class="result-title">
+              6.          <a href="/another-test-article">
+                  Another Test Article      </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (News)
+                </span>
+              </dd>
+              <dd class="result-text">
+              Some <span class="highlight">test</span> article content! &nbsp;... </dd>
+                <dd class="result-created">
+                Created on 27 December 2013   </dd>
+              <dt class="result-title">
+              7.          <a href="/test-news-article">
+                  Test News Article     </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (News)
+                </span>
+              </dd>
+              <dd class="result-text">
+              <span class="highlight">Test</span>ing 123! &nbsp;... </dd>
+                <dd class="result-created">
+                Created on 26 December 2013   </dd>
+              <dt class="result-title">
+              8.          <a href="/component/jevents/icalrepeat.detail/2014/01/14/5/-/test-event-1?Itemid=1">
+                  Test Event 1 (2014-01-14)     </a>
+                </dt>
+                <dd class="result-category">
+                <span class="small">
+                  (Events Calendar/Test Event 1)
+                </span>
+              </dd>
+              <dd class="result-text">
+              <span class="highlight">Test</span> Event 1 Test event 1 activity line.    &nbsp;...  </dd>
+                <dd class="result-created">
+                Created on 04 January 2014    </dd>
+            </dl>
+
+          <div class="pagination">
+            </div>
+          </div>
+
+    %aside.sidebar-article
+      %section.widget.related
+        %h4 Related Articles
+        %ul
+          %li= link_to "Test 1", "#"
+          %li= link_to "Test 2", "#"
+          %li= link_to "Test 3", "#"
+
+      %section.widget.excerpt
+        %p This is a test excerpt from a while back. This is just a test.
+
+      %section.widget.twitter
+        %h4
+          %i.icon-twitter
+          Twitter
+          = link_to "Follow @aedweb", "https://twitter.com/aedweb", class: "twitter-follow-button", :'data-show-count' => "false", :'data-show-screen-name' => "false"
+        .inner
+          .tweet-bubble
+            = link_to "Loading...", "https://twitter.com/aedweb", class: "twitter-timeline", :'data-widget-id' => "408482288276475904", :'data-chrome' => "nofooter noborders noheader transparent", :'data-tweet-limit' => "1"
+          .bottom
+            = link_to "@aedweb", "https://twitter.com/aedweb", class: "handle"
+            = link_to "View More", "https://twitter.com/aedweb", class: "view-more"
+      %section.widget.dark.youtube
+        %h4
+          %i.icon-youtube
+          Latest Videos
+        .inner
+          #youtube-feed
+          .bottom
+            = link_to "View More", "http://www.youtube.com/channel/UCJdjVELGnfTYYCX5bCZ920A", class: "view-more"

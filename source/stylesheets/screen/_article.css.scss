@@ -9,7 +9,7 @@
       top: 0;
       bottom: 0;
       left: 0;
-      width: em(180);
+      width: em(150);
       background: rgba(57, 41, 78, .25);
       display: none;
 
@@ -34,7 +34,7 @@
       margin-top: em(20);
 
       @include media($tablet) {
-        margin: 0 0 0 em(180);
+        margin: 0 0 0 em(150);
       }
 
       h1 {
@@ -45,7 +45,7 @@
         color: #fff;
 
         @include media($tablet) {
-          margin: em(10) em(15);
+          margin: em(10);
         }
       }
     }
@@ -64,10 +64,11 @@
 
     @include media($tablet) {
       background: #d0ccd0;
-      width: em(180);
+      width: em(150);
       position: absolute;
       top: 0;
       left: 0;
+      bottom: 0;
       padding: em(15);
       margin-bottom: 0;
     }
@@ -100,7 +101,7 @@
     padding: em(15) em(20);
 
     @include media($tablet) {
-      margin-left: em(180);
+      margin-left: em(150);
     }
 
     a {
@@ -185,6 +186,105 @@
     .search {
       .page-title {
         display: none;
+      }
+
+      .btn-toolbar {
+        @include clearfix;
+
+        .pull-left {
+          float: left;
+          width: 50%;
+        }
+
+        .inputbox {
+          font-size: em(19);
+          width: 100%;
+        }
+
+        button {
+          background: $green;
+          color: #fff;
+          font-weight: bold;
+          border: 0;
+          padding: em(10);
+          margin-left: em(5);
+          font-size: em(14);
+
+          &:hover {
+            background: lighten($green, 5%);
+          }
+        }
+      }
+
+      .searchintro {
+        margin: em(10) 0;
+      }
+
+      fieldset {
+        margin-bottom: em(15);
+
+        legend {
+          text-transform: uppercase;
+          color: #999;
+          font-weight: bold;
+          font-size: em(13);
+          margin-bottom: em(5);
+        }
+
+        .phrases-box {
+          label {
+            display: block;
+            margin-bottom: em(3);
+            font-size: em(13);
+
+            input {
+              margin-right: em(5);
+            }
+          }
+        }
+
+        .ordering-box {
+          font-size: em(13);
+        }
+
+        .checkbox {
+          display: block;
+          margin-bottom: em(3);
+          font-size: em(13);
+
+          input {
+            margin-right: em(5);
+          }
+        }
+      }
+
+      .form-limit {
+        margin-bottom: em(3);
+        font-size: em(13);
+      }
+
+      .search-results {
+        .result-title {
+          margin-top: em(20);
+        }
+
+        .result-category {
+          font-size: em(12);
+          color: #999;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: em(5);
+        }
+
+        .result-text {
+          margin-top: em(5);
+        }
+
+        .result-created {
+          font-size: em(11);
+          color: #999;
+          margin-top: em(5);
+        }
       }
     }
   }

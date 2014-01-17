@@ -45,12 +45,6 @@ table {
 }
 
 input,
-textarea,
-select {
-  -webkit-appearance: none;
-}
-
-input,
 select {
   vertical-align: middle;
 }
@@ -112,7 +106,7 @@ body.menu-active {
     @include outer-container;
 
     @include media($desktop) {
-      max-width: em(960);
+      max-width: em(1000);
     }
   }
 }
@@ -128,7 +122,10 @@ body.menu-active {
 
     > .main-article {
       @include media($tablet) {
-        @include span-columns(9);
+        float: left;
+        display: block;
+        margin-right: 2%;
+        width: 73%;
       }
     }
 
@@ -146,9 +143,10 @@ body.menu-active {
       margin-top: em(20);
 
       @include media($tablet) {
-        @include span-columns(3);
-        @include omega();
-        margin-top: 0;
+        float: left;
+        display: block;
+        width: 25%;
+        margin: 0;
       }
     }
   }
