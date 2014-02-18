@@ -189,7 +189,7 @@
     margin: em(10) 0;
 
     li {
-      padding: em(10) em(15);
+      padding: em(10) 0 em(10) em(15);
       @include clearfix;
       border-bottom: 1px dashed #ccc;
 
@@ -220,6 +220,8 @@
         padding: em(10) 0;
         width: 42%;
         border-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         margin-left: em(5);
         font-weight: bold;
         color: #fff;

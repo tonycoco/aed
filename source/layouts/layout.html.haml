@@ -61,24 +61,20 @@
                   %li= link_to "Twitter", "https://twitter.com/aedweb", class: "badge icons-twitter"
 
             %nav.nav
-              = link_to '<span><i class="icon-account"></i> Members</span>', "#", class: "account"
+              = link_to "#", class: "account" do
+                %span
+                  <i class="icon-account"></i>
+                  Members
+                .member-menu
+                  %form.member-form
+                    %input{ type: "text", placeholder: "Email" }
+                    %input{ type: "password", placeholder: "Password" }
+                    %input.button{ type: "submit", value: "Log In" }
               %ul.top-links
                 %li
                   = link_to "<span>About AED</span>", "#subnav-1"
                   .submenu-image= image_tag "placeholder/subnav-1.jpg"
-                  %ul.submenu-items
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
-                    %li= link_to "<span>Link 1</span>", "#"
+                  <ul class="submenu-items"><li><a class="item-477" href="/web/index.php/about-aed/our-mission"><span>Our Mission</span></a></li><li><a class="item-497" href="/web/index.php/about-aed/about-forum-2"><span>Personnel</span></a><ul class="submenu-items"><li><a class="item-492" href="/web/index.php/about-aed/about-forum-2/leadership"><span>Leadership</span></a></li><li><a class="item-498" href="/web/index.php/about-aed/about-forum-2/organization"><span>Organizational Chart</span></a></li><li><a class="item-500" href="/web/index.php/about-aed/about-forum-2/fellows"><span>Fellows</span></a></li></ul></li><li><a class="item-496" href="/web/index.php/about-aed/about-forum"><span>Forum</span></a></li><li><a class="item-494" href="/web/index.php/about-aed/about-aed-faq"><span>FAQ</span></a></li><li><a class="item-495" href="/web/index.php/about-aed/about-aed-history"><span>History</span></a></li><li><a class="item-493" href="/web/index.php/about-aed/about-aed-sister-organizations"><span>Sister Organizations</span></a></li><li><a class="item-499" href="/web/index.php/about-aed/advisory"><span>Advisory Board</span></a></li></ul>
                 %li
                   = link_to "<span>Eating Disorders Information</span>", "#subnav-2"
                   %ul.submenu-items

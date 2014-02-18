@@ -23,25 +23,41 @@ $("#slider").cycle({
   fx: "scrollHorz"
 });
 
+$(".nav a.account").on("mouseover", function(event) {
+  $(".nav .member-menu").addClass("hovering");
+});
+
+$(".nav a.account").on("mouseleave", function() {
+  $(".nav .member-menu").removeClass("hovering");
+});
+
 $(".nav .top-links a").on("mouseover", function(event) {
   var $target = $(event.target).closest("a");
   var $image = $target.siblings(".submenu-image");
-  var content = $target.siblings(".submenu-items").first().html();
+  var html = $target.siblings(".submenu-items").first().html();
+  var $list = $("<div>").html(html).find("li");
+  $list.each(function() {
+    $(this).find("ul").remove();
+  });
 
   $(".nav .subnav > .inner").removeClass("hovering");
   $(".nav .top-links a").removeClass("hovering");
-  $(".nav .subnav > .inner .subnav-image").remove();
-  $(".nav .subnav > .inner ul").remove();
+  $(".nav .subnav > .inner > .subnav-image").remove();
+  $(".nav .subnav > .inner > .columns").remove();
 
   $(this).addClass("hovering");
   $(".nav .subnav").addClass("hovering");
 
   if ($image.length > 0) {
     $(".nav .subnav > .inner").append('<div class="subnav-image"></div>');
-    $(".nav .subnav > .inner .subnav-image").html($image.first().html());
+    $(".nav .subnav > .inner > .subnav-image").html($image.first().html());
   }
-  $(".nav .subnav > .inner").append("<ul></ul>");
-  $(".nav .subnav > .inner ul").html(content);
+
+  $(".nav .subnav > .inner").append('<div class="columns"></div>');
+  var $columns = $(".nav .subnav > .inner > .columns");
+  for (var i = 0, l = $list.length; i < l; i += 5) {
+    $columns.append($('<ul class="column">').append($list.slice(i, i + 5)));
+  }
 });
 
 $(".nav").on("mouseleave", function() {
